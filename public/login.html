@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/new.css">
+  <title>Login</title>
+  <style>
+    .input1::placeholder{
+      color:white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input class="input1" type="text" id="teamName" placeholder="Team Name" required>
+      <input class="input1" type="text" id="pin" placeholder="Room PIN" required>
+      <button type="submit">Login</button>
+    </form>
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

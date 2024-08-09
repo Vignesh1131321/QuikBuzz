@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Room</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img src="buzzer.png" alt="QuikBuzz Logo"> <!-- Replace with your logo path -->
+        QuikBuzz
+      </div>
+      <ul class="navbar-nav">
+
+        <li><button id="home-button">Home</button></li>
+        <li><button id="create-room-button">Host</button></li>
+        <li><button id="buzzer-button">Participant</button></li>
+        <li><button id="link1">LeaderBoard</button></li>
+        <li><button id="link2">Timer</button></li>
+      </ul>
+    </nav>
+  <div id="mega-container">
+    <div id = "details">
+      <button id="create-room" class="createRoom">Create New Room</button>
+      <h2 id="room-pin"></h2>
+    </div>
+    <div id="log">
+      <h2>Logged in Teams</h3>
+      <ul id="teams-list"></ul>
+    </div>
+    <div id="buzz">
+      <h2>Buzzed Teams</h3>
+      <ul id = "buzzed"></ul>
+    </div>
+    <div>
+      <h2 class="header">Leaderboard</h2>
+      <ul id="leaderboard"></ul>
+      <h2>Comments</h2>
+      <ul id = "tab-switch-list"></ul>
+      <button id="reset">Reset</button>
+    </div>
+    <div>
+      <h2 class="header">Timer</h2>
+      <label for="timer-minutes">Set Timer (minutes):</label>
+      <input type="number" id="timer-minutes" style="color:white" min="1" value="1">
+      <button id="start-timer-button">Start Timer</button>
+  <!--     <div id="timer-display"></div> -->
+    </div>
+    <div class="timer-container">
+      <div id="circular-timer" class="circular-timer">
+        <div id="timer-blink" class="timer-blink"></div>
+        <div id="timer-time" class="timer-time"></div>
+      </div>
+    </div>
+    <div >
+      <h2>Update Scores</h3>
+      <div id="score-updates" >
+        <!-- Dynamic score update inputs will be inserted here -->
+      </div>
+      <button id="update-scores-button">Update Scores</button>
+    </div>
+    <div>
+      <h2>Answers</h2>
+      <ul id="answers-list"></ul>
+    </div>
+    <div id="stats-container">
+      <h2>Team Performance Analysis</h3>
+      <canvas id="scoreChart"  width="40" height="20"></canvas>
+      <div id="teamStats"></div>
+    </div>
+  </div>
+<!--   <div>
+    <div id="commentator-male" class="commentator"></div>
+    <div id="commentator-female" class="commentator"></div>
+  </div> -->
+
+  <script src="js/createRoom.js"></script>
+  <script>
+    document.getElementById('home-button').addEventListener('click', () => {
+      window.location.href = 'home.html'; // Replace with your home page URL
+    });
+
+    document.getElementById('create-room-button').addEventListener('click', () => {
+      window.location.href = 'createRoom.html'; // Replace with your create room page URL
+    });
+
+    document.getElementById('buzzer-button').addEventListener('click', () => {
+      window.location.href = 'buzzer.html'; // Replace with your buzzer page URL
+    });
+  </script>
+</body>
+</html>

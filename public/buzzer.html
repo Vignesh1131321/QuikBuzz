@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzzer Page</title>
+  <link rel="stylesheet" href="css/buzzer.css">
+<!--   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    #buzzed-teams {
+      list-style-type: none;
+      padding: 0;
+    }
+    #buzzed-teams li {
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style> -->
+  <style>
+    .input1::placeholder{
+      color:white;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="buzzer.png" alt="QuikBuzz Logo"> <!-- Replace with your logo path -->
+      QuikBuzz
+    </div>
+    <ul class="navbar-nav">
+      <li><button id="home-button">Home</button></li>
+      <li><button id="create-room-button">Host</button></li>
+      <li><button id="buzzer-button">Buzzer</button></li>
+    </ul>
+  </nav>
+  <div id="mega-container">
+    <div class="buzzer-container">
+      <h1>Buzzer Page</h1>
+      <button id="buzz-button">Buzz!</button>
+      <div>
+        <h3>Answer</h3>
+        <input class="input1" type="text" id="answer-input" placeholder="Enter your answer" style="color: white">
+        <button id="submit-answer-button">Submit Answer</button>
+      </div>
+    <h3>Buzzed Teams</h3>
+    <ul id="buzzed-teams"></ul>
+
+
+
+    
+    </div>
+  </div>
+
+
+<script src="js/buzzer.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+
+/* Left half styling */
+.left-half, .right-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-half {
+    background: #084ebd; /* Background color of left half */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    flex: 0.35; /* Reduced the size of the left half */
+}
+
+/* Logo container styling */
+.logo-container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+    max-width: 120px;
+}
+
+.logo-title {
+    font-size: 2.25rem;
+    margin: 0.5rem 0;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+/* Right half styling */
+.right-half {
+    background: #a5b7ff; /* Light background for right half */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    flex: 0.65; /* Increased the size of the right half */
+}
+
+.container {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Title animation */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+
+/* Box container styling */
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 45%;
+    margin: 0 2%;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    background-color: #e3eeff; /* Light blue color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.box h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.box h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.box button {
+    background: #084ebd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.box button:hover {
+    background: #063a8e;
+}
+
+.host-box {
+    animation: slideInLeft 1s ease;
+}
+
+.participant-box {
+    animation: slideInRight 1s ease;
+}
+
+/* About section styling */
+.about {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.about:hover {
+    transform: scale(1.05);
+    background-color: #e3eeff; /* Light yellow color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.about p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.about button {
+    background: #084ebd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.about button:hover {
+    background: #063a8e;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Emoji styling */
+.emoji-container {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
