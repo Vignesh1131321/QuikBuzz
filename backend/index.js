@@ -13,10 +13,7 @@ app.use(express.json());
 
 const rooms = {};
 let tabSwitches = [];
-/* // Initialize OpenAI API
-const openai = new OpenAIApi({
-  api_key: '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'
-}); */
+
 
 
 app.post('/create-room', (req, res) => {
