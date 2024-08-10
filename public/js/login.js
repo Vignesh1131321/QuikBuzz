@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     const pin = document.getElementById('pin').value;
   
     try {
-      const response = await fetch(`http://localhost:${port}/login`, {
+      const response = await fetch(`https://quikbuzz4all.onrender.com/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
