@@ -1,10 +1,11 @@
+const port = window.location.port;
 document.getElementById('loginForm').addEventListener('submit', async (event) => {
     event.preventDefault();
     const teamName = document.getElementById('teamName').value;
     const pin = document.getElementById('pin').value;
   
     try {
-      const response = await fetch('http://localhost:5000/login', {
+      const response = await fetch(`http://localhost:${port}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
