@@ -11,7 +11,7 @@ app.use(express.json());
 
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 const rooms = {};
 let tabSwitches = [];
 
@@ -174,7 +174,7 @@ app.post('/generate-comment', async (req, res) => {
   }
 }); */
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'home.html'));
+  res.sendFile(path.join(__dirname, '../public', 'home.html'));
 });
 
 const port = process.env.PORT || 4000;
