@@ -11,6 +11,8 @@ app.use(express.json());
 
 
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 const rooms = {};
 let tabSwitches = [];
 
@@ -172,6 +174,9 @@ app.post('/generate-comment', async (req, res) => {
     res.status(500).json({ success: false, message: 'Error generating comment' });
   }
 }); */
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'home.html'));
+});
 
-const PORT = 5000;
+const port = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
