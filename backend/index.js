@@ -5,7 +5,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const cors = require('cors');
-app.use(cors());
+app.use(cors({
+  origin: 'https://quikbuzz4all.onrender.com',
+}));
 app.use(express.json());
 
 
