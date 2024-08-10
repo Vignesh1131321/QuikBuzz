@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const scoreUpdatesDiv = document.getElementById('score-updates');
   const updateScoresButton = document.getElementById('update-scores-button');
   const startTimerButton = document.getElementById('start-timer-button');
-/*   const timerDisplay = document.getElementById('timer-display'); */
   const timerMinutesInput = document.getElementById('timer-minutes');
   const timerBlink = document.getElementById('timer-blink');
 const timerTime = document.getElementById('timer-time');
@@ -27,6 +26,7 @@ const timerTime = document.getElementById('timer-time');
   let scoreChart;
   reset.addEventListener('click',() => {
     answersList.innerHTML = '';
+    tabSwitchList.innerHTML = '';
     buzzed.innerHTML = '';
     tabSwitchList.innerHTML = '';
     clearBuzzes();
@@ -59,6 +59,7 @@ link2.addEventListener('click', () => {
 
 
   startTimerButton.addEventListener('click', () => {
+    tabSwitchList.innerHTML = '';
     clearBuzzes();
     clearAnswers();
     clearTabSwitches(); 
