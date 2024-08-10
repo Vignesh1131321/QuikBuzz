@@ -9,7 +9,7 @@
 
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #a5b7ff;
+    background: #cbd5ff;
     color: #fff;
     line-height: 1.6;
     display: flex;
@@ -23,15 +23,13 @@
     margin-top: 30px;
     margin-bottom: 30px;
   } */
-  .createRoom {
-    margin-top: 40px;
-  }
+
   
   /* Navbar Styles */
 
   
   button {
-    background-color: #a5b7ff;
+    background-color: #cbd5ff;
     color: black;
     border: 2px solid black;
     padding: 10px 20px;

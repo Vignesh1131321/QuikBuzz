@@ -167,7 +167,6 @@ link2.addEventListener('click', () => {
       });
     } catch (error) {
       console.error('Error fetching tab switches:', error);
-      alert(`Error fetching tab switches: ${error.message}`);
     }
   };
   const clearTabSwitches = async () => {
@@ -185,7 +184,6 @@ link2.addEventListener('click', () => {
       }
     } catch (error) {
       console.error('Error clearing tab switches:', error);
-      alert(`Error clearing tab switches: ${error.message}`);
     }
   };
   const fetchBuzzesAndAnswers = async () => {
@@ -232,7 +230,6 @@ link2.addEventListener('click', () => {
       clearAnswers();
     } catch (error) {
       console.error('Error fetching buzzes and answers:', error);
-      alert(`Error fetching buzzes and answers: ${error.message}`);
     }
   };
   
@@ -251,7 +248,6 @@ link2.addEventListener('click', () => {
       }
     } catch (error) {
       console.error('Error clearing answers:', error);
-      alert(`Error clearing answers: ${error.message}`);
     }
   };
 
@@ -270,7 +266,6 @@ link2.addEventListener('click', () => {
       }
     } catch (error) {
       console.error('Error clearing answers:', error);
-      alert(`Error clearing answers: ${error.message}`);
     }
   };
   createRoomButton.addEventListener('click', async () => {
@@ -282,11 +277,10 @@ link2.addEventListener('click', () => {
         sessionStorage.setItem('roomPin', roomPin);
         fetchTeams(); // Fetch teams right after creating the room
       } else {
-        alert('Failed to create room');
+        console.log('Failed to create room');
       }
     } catch (error) {
       console.error('Error creating room:', error);
-      alert('Error creating room');
     }
   });
 
@@ -318,7 +312,6 @@ link2.addEventListener('click', () => {
       fetchTeams(); // Refresh leaderboard
     } catch (error) {
       console.error('Error updating scores:', error);
-      alert(`Error updating scores: ${error.message}`);
     }
   });
   const displayStatistics = (teams) => {

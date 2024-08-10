@@ -1,0 +1,87 @@
+/* #cbd5ff */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 35px;
+    margin-top: 50px;
+    color: #084ebd;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #084ebd;
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh; /* Adjusted to ensure the container is vertically centered */
+}
+
+.container {
+    border: 1px solid black;
+    margin: auto auto;
+    background-color: #cbd5ff;
+    padding: 40px; /* Increased padding for a larger container */
+    border-radius: 20px;
+    max-width: 40%; /* Increased the max-width for a larger container */
+    height: 500px;
+    width: 100%; /* Ensure it uses full width up to max-width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 16px;
+
+}
+button{
+    width: 30%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 16px;
+    display: block; /* Ensure block-level element to center properly */
+}
+#teamName{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+#pin{
+    margin-top:0px;
+    margin-bottom: 20px;
+}
+input {
+    background-color: #fff;
+    color: #000;
+}
+
+button {
+    background-color: #084ebd;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #8a9eff; /* Slightly different color on hover */
+    color: #084ebd;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(1, 1, 1, 0.5);
+}
