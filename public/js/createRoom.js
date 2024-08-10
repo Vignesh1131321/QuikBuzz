@@ -31,7 +31,7 @@ const timerTime = document.getElementById('timer-time');
     tabSwitchList.innerHTML = '';
     clearBuzzes();
     clearAnswers();
-    clearTabSwitches(); // Clear tab switch data on timer start
+    clearTabSwitches(); 
   })
   function scrollToElement(elementSelector, instance = 0) {
     // Select all elements that match the given selector
@@ -59,7 +59,9 @@ link2.addEventListener('click', () => {
 
 
   startTimerButton.addEventListener('click', () => {
- // Clear tab switch list on timer start
+    clearBuzzes();
+    clearAnswers();
+    clearTabSwitches(); 
     fetchTabSwitches(); // Fetch tab switches after timer ends
 
     const timerDuration = parseInt(timerMinutesInput.value) * 60 * 1000; // convert minutes to milliseconds
@@ -71,15 +73,12 @@ link2.addEventListener('click', () => {
         const remainingTime = timerEndTime - Date.now();
         if (remainingTime <= 0) {
             clearInterval(timerInterval);
-            /* timerDisplay.textContent = "Time's up!"; */
-            /* fetchAnswers(); */
             fetchBuzzesAndAnswers();
             
         } else {
           setInterval(fetchTabSwitches,1000);
             const minutes = Math.floor(remainingTime / 60000);
             const seconds = Math.floor((remainingTime % 60000) / 1000);
-            /* timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`; */
             
             if(remainingTime === 0){
               timerTime.textContent = "Time's up";

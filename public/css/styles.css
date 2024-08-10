@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Basic reset */
 
 * {
   margin: 0;
@@ -241,12 +239,7 @@ input[type="number"] {
   font-size: 4em;
   color:   #ffffff;
   ;
-/*   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
-  z-index: 1; */
+
 }
 
 #mega-container{
@@ -261,4 +254,3 @@ input[type="number"] {
 
 
 
-/* rgb(5, 5, 25) */

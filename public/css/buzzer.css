@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,14 +16,7 @@
     padding: 20px;
     min-height: 50vh;
   }
-  /* #buzz-button{
-    border-radius: 40px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  } */
 
-  
-  /* Navbar Styles */
 
   
   button {
@@ -120,12 +111,7 @@
     }
   
 
-  /*   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    z-index: 1; */
+
   }
 
   #buzz-button {
@@ -165,9 +151,7 @@
 .navbar {
     height: 60px;
   
-  /*     position: fixed;
-    display: block;
-    top: 0px; */
+
     display: flex;
     justify-content: space-between;
     align-items: center;

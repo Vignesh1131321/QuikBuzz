@@ -136,12 +136,14 @@ app.post('/clear-answers', (req, res) => {
 app.post('/reset-buzz/:pin', (req, res) => {
     const pin = req.params.pin;
     const team = req.body.team;
+    const room = rooms[pin];
+    if (room) {
+      room.buzzes = [];
+      res.json({ success: true });
+    } else {
+      res.json({ success: false, message: 'Room not found' });
+    }
 
-    // Your logic to reset the buzz state for the specific team in the given room
-    // For example, clear the buzz state in your database or in-memory store
-    // ...
-
-    res.json({ success: true });
 });
 
 // Endpoint to handle tab switch notification
@@ -167,24 +169,9 @@ app.post('/clear-tab-switches', (req, res) => {
   res.json({ success: true, message: 'Tab switch data cleared' });
 });
 
-/* // New route to generate commentator comments
-app.post('/generate-comment', async (req, res) => {
-  const { teamName, context } = req.body;
 
-  try {
-    const response = await openai.createCompletion({
-      model: 'text-davinci-003',
-      prompt: `Currenty many participants are participating in a quiz. We have many teams and their current scores. Act as a commentator and encourage the teams. Generate a commentator's comment for team ${teamName} with context: ${context}`,
-      max_tokens: 50,
-    });
 
-    const comment = response.data.choices[0].text.trim();
-    res.json({ success: true, comment });
-  } catch (error) {
-    console.error('Error generating comment:', error);
-    res.status(500).json({ success: false, message: 'Error generating comment' });
-  }
-}); */
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'home.html'));
 });
