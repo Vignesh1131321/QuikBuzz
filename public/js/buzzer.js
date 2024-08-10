@@ -5,8 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitAnswerButton = document.getElementById('submit-answer-button');
     let buzzed = false;
 
-    const roomPin = localStorage.getItem('roomPin');
-    const teamName = localStorage.getItem('teamName');
+    const roomPin = sessionStorage.getItem('roomPin');
+    const teamName = sessionStorage.getItem('teamName');
+    
     const playBuzzerSound = () => {
       const audio = new Audio('buzzer-sound.mp3'); // Ensure this path is correct
       audio.play();
