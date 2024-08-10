@@ -6,9 +6,7 @@
     padding: 0;
     box-sizing: border-box;
   }
-  #teamStats{
-    font-size: 24px;
-  }
+
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #a5b7ff;
@@ -89,19 +87,9 @@
     border-radius: 10px;
   }
   
-  #timer-display {
-    font-size: 24px;
-    margin-top: 10px;
-  }
+
   
-  #score-updates > div {
-    margin-bottom: 10px;
-  }
-  
-  #stats-container {
-    width: 100%;
-    max-width: 800px;
-  }
+
   
   #answer-input{
     background-color: rgba(5, 5, 25, 0.558);
@@ -111,7 +99,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
-  #teams-list, #buzzed, #leaderboard, #tab-switch-list, #answers-list {
+  #buzzed{
     max-height: 200px;
     overflow-y: auto;
   }
@@ -133,58 +121,7 @@
       font-size: 16px;
     }
   
-    #timer-display {
-      font-size: 28px;
-    }
-  }
-  
-  
-  /* styles.css */
-  
-  .timer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .circular-timer {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 10px solid gray; /* Green border */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .timer-blink {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.1);
-    animation: blink-green 1s infinite;
-  }
-  
-/*   @keyframes blink-green {
-    0% { background-color: rgba(180, 104, 255, 0.886) ; }
-    50% { background-color: rgba(160, 64, 255, 0.696); }
-    100% { background-color: rgba(128, 0, 255, 0.379); }
-  }
-  
-  @keyframes blink-red {
-    0% { background-color: rgba(181, 0, 0, 0.511); }
-    50% { background-color: rgb(255, 45, 45); }
-    100% { background-color: rgba(181, 0, 0, 0.511); }
-  } */
-  
-  .timer-time {
-    text-align: center;
-    font-size: 4em;
-    color:   #000000;
-    ;
+
   /*   position: absolute;
     top: 50%;
     left: 50%;

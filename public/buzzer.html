@@ -5,31 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buzzer Page</title>
   <link rel="stylesheet" href="css/buzzer.css">
-<!--   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    h1 {
-      color: #333;
-    }
-    #buzzed-teams {
-      list-style-type: none;
-      padding: 0;
-    }
-    #buzzed-teams li {
-      margin: 5px 0;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      margin: 10px 0;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style> -->
+
   <style>
     .input1::placeholder{
       color:white;
@@ -68,5 +44,18 @@
 
 
 <script src="js/buzzer.js"></script>
+<script>
+  document.getElementById('home-button').addEventListener('click', () => {
+    window.location.href = 'home.html'; // Replace with your home page URL
+  });
+
+  document.getElementById('create-room-button').addEventListener('click', () => {
+    window.location.href = 'createRoom.html'; // Replace with your create room page URL
+  });
+
+  document.getElementById('buzzer-button').addEventListener('click', () => {
+    window.location.href = 'buzzer.html'; // Replace with your buzzer page URL
+  });
+</script>
 </body>
 </html>

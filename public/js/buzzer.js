@@ -35,7 +35,7 @@ const removePulsatingEffect = () => {
             }
         } catch (error) {
             console.error('Error resetting buzz state:', error);
-            alert(`Error resetting buzz state: ${error.message}`);
+
         }
     };
 
@@ -77,11 +77,11 @@ const removePulsatingEffect = () => {
           removePulsatingEffect();
           addBuzzedTeam(data.team, data.time);
         } else {
-          alert('Failed to buzz: ' + data.message);
+          console.log('Failed to buzz: ' + data.message);
         }
       } catch (error) {
         console.error('Error buzzing:', error);
-        alert('Error buzzing');
+
       }
     });
     
@@ -103,14 +103,14 @@ const removePulsatingEffect = () => {
     
           const data = await response.json();
           if (data.success) {
-            alert('Answer submitted successfully');
+            console.log('Answer submitted successfully');
             answerInput.value = '';
           } else {
-            alert('Failed to submit answer: ' + data.message);
+            console.log('Failed to submit answer: ' + data.message);
           }
         } catch (error) {
           console.error('Error submitting answer:', error);
-          alert('Error submitting answer');
+
         }
       });
     const addBuzzedTeam = (teamName, time) => {
@@ -141,7 +141,7 @@ const removePulsatingEffect = () => {
         }
       } catch (error) {
         console.error('Error fetching teams:', error);
-        alert(`Error fetching teams: ${error.message}`);
+
       }
     };
     const fetchAnswers = async () => {
@@ -158,7 +158,7 @@ const removePulsatingEffect = () => {
           console.log('Answers:', data.answers); // Log answers, implement UI display in createRoom.js
         } catch (error) {
           console.error('Error fetching answers:', error);
-          alert(`Error fetching answers: ${error.message}`);
+
         }
       };
       document.addEventListener('visibilitychange', async () => {

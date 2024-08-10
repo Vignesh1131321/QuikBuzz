@@ -16,7 +16,17 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../public')));
 const rooms = {};
 let tabSwitches = [];
-
+const getIndianTime = () => {
+  const options = { 
+    timeZone: 'Asia/Kolkata', 
+    hour: '2-digit', 
+    minute: '2-digit', 
+    second: '2-digit', 
+    hour12: false // 24-hour format
+  };
+  const formatter = new Intl.DateTimeFormat('en-GB', options);
+  return formatter.format(new Date());
+};
 
 
 app.post('/create-room', (req, res) => {
@@ -58,7 +68,7 @@ app.post('/buzz', (req, res) => {
   const { teamName, pin } = req.body;
   const room = rooms[pin];
   if (room) {
-    const buzzTime = new Date().toLocaleTimeString();
+    const buzzTime = getIndianTime();
     room.buzzes.push({ team: teamName, time: buzzTime });
     res.json({ success: true, team: teamName, time: buzzTime });
   } else {

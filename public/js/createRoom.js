@@ -147,62 +147,7 @@ link2.addEventListener('click', () => {
 
     }
   };
-/*   const fetchAnswers = async () => {
-    try {
-      
-      const response = await fetch(`http://localhost:5000/answers/${roomPin}`);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch answers: ${response.statusText}`);
-      }
-      const data = await response.json();
-      if (!data.success) {
-        throw new Error(`Error fetching answers: ${data.message}`);
-      }
 
-      answersList.innerHTML = '';
-      data.answers.forEach(answer => {
-        const listItem = document.createElement('li');
-        console.log(`${answer.team.name}`);
-        listItem.textContent = `Team: ${answer.team} - Answer: ${answer.answer}`;
-        answersList.appendChild(listItem);
-      });
-      // Clear answers after fetching them
-      clearAnswers();
-
-    } catch (error) {
-      console.error('Error fetching answers:', error);
-      alert(`Error fetching answers: ${error.message}`);
-    }
-  }; */
-  // Fetch function for teams that switched tabs
-/*   const updateCommentators = async (teams) => {
-    const leadingTeam = teams[0];
-    const trailingTeam = teams[teams.length - 1];
-
-    await generateComment(leadingTeam.name, 'leading', commentatorMale);
-    await generateComment(trailingTeam.name, 'trailing', commentatorFemale);
-  };
-  const generateComment = async (teamName, context, element) => {
-    try {
-      const response = await fetch('http://localhost:5000/generate-comment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ teamName, context }),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        element.textContent = data.comment;
-      } else {
-        element.textContent = 'Error generating comment';
-      }
-    } catch (error) {
-      console.error('Error generating comment:', error);
-      element.textContent = 'Error generating comment';
-    }
-  }; */
   const fetchTabSwitches = async () => {
     try {
       const response = await fetch(`https://quikbuzz4all.onrender.com/tab-switches/${roomPin}`);
