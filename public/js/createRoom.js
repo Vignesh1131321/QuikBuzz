@@ -98,7 +98,7 @@ link2.addEventListener('click', () => {
   const fetchTeams = async () => {
     try {
       console.log('Fetching teams for pin:', roomPin); // Log the pin being used
-      const response = await fetch(`http://localhost:5000/teams/${roomPin}`);
+      const response = await fetch(`https://quikbuzz4all.onrender.com/teams/${roomPin}`);
       const data = await response.json();
       if (!data.success) {
         throw new Error(data.message);
@@ -204,7 +204,7 @@ link2.addEventListener('click', () => {
   }; */
   const fetchTabSwitches = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/tab-switches/${roomPin}`);
+      const response = await fetch(`https://quikbuzz4all.onrender.com/tab-switches/${roomPin}`);
       if (!response.ok) {
         throw new Error(`Failed to fetch tab switches: ${response.statusText}`);
       }
@@ -226,7 +226,7 @@ link2.addEventListener('click', () => {
   };
   const clearTabSwitches = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/clear-tab-switches`, {
+      const response = await fetch(`hhttps://quikbuzz4all.onrender.com/clear-tab-switches`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -244,7 +244,7 @@ link2.addEventListener('click', () => {
   };
   const fetchBuzzesAndAnswers = async () => {
     try {
-      const buzzesResponse = await fetch(`http://localhost:5000/teams/${roomPin}`);
+      const buzzesResponse = await fetch(`https://quikbuzz4all.onrender.com/teams/${roomPin}`);
       
       if (!buzzesResponse.ok) {
         throw new Error(`Failed to fetch buzzes: ${buzzesResponse.statusText}`);
@@ -255,7 +255,7 @@ link2.addEventListener('click', () => {
         throw new Error(buzzesData.message);
       }
   
-      const answersResponse = await fetch(`http://localhost:5000/answers/${roomPin}`);
+      const answersResponse = await fetch(`https://quikbuzz4all.onrender.com/answers/${roomPin}`);
       
       if (!answersResponse.ok) {
         throw new Error(`Failed to fetch answers: ${answersResponse.statusText}`);
@@ -292,7 +292,7 @@ link2.addEventListener('click', () => {
   
   const clearBuzzes = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/clear-buzzes`, {
+      const response = await fetch(`https://quikbuzz4all.onrender.com/clear-buzzes`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -311,7 +311,7 @@ link2.addEventListener('click', () => {
 
   const clearAnswers = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/clear-answers`, {
+      const response = await fetch(`https://quikbuzz4all.onrender.com/clear-answers`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -329,7 +329,7 @@ link2.addEventListener('click', () => {
   };
   createRoomButton.addEventListener('click', async () => {
     try {
-      const response = await fetch('http://localhost:5000/create-room', { method: 'POST' });
+      const response = await fetch('https://quikbuzz4all.onrender.com/create-room', { method: 'POST' });
       const data = await response.json();
       if (data.success) {
         roomPin = data.pin;
@@ -355,7 +355,7 @@ link2.addEventListener('click', () => {
       });
 
       for (const update of updates) {
-        const response = await fetch('http://localhost:5000/update-score', {
+        const response = await fetch('https://quikbuzz4all.onrender.com/update-score', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

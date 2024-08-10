@@ -21,7 +21,7 @@ const removePulsatingEffect = () => {
 
     const resetBuzzState = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/reset-buzz/${roomPin}`, {
+            const response = await fetch(`https://quikbuzz4all.onrender.com/reset-buzz/${roomPin}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -60,7 +60,7 @@ const removePulsatingEffect = () => {
         // Disable the button to prevent further clicks
         buzzButton.disabled = true;
         
-        const response = await fetch('http://localhost:5000/buzz', {
+        const response = await fetch('https://quikbuzz4all.onrender.com/buzz', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const removePulsatingEffect = () => {
         }
     
         try {
-          const response = await fetch('http://localhost:5000/submit-answer', {
+          const response = await fetch('https://quikbuzz4all.onrender.com/submit-answer', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const removePulsatingEffect = () => {
     const fetchBuzzedTeams = async () => {
       try {
         
-        const response = await fetch(`http://localhost:5000/teams/${roomPin}`);
+        const response = await fetch(`https://quikbuzz4all.onrender.com/teams/${roomPin}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch teams: ${response.statusText}`);
         }
@@ -145,7 +145,7 @@ const removePulsatingEffect = () => {
     };
     const fetchAnswers = async () => {
         try {
-          const response = await fetch(`http://localhost:5000/answers/${roomPin}`);
+          const response = await fetch(`https://quikbuzz4all.onrender.com/answers/${roomPin}`);
           if (!response.ok) {
             throw new Error(`Failed to fetch answers: ${response.statusText}`);
           }
@@ -164,7 +164,7 @@ const removePulsatingEffect = () => {
         if (document.hidden) {
             // Inform the host when the participant switches the tab
             try {
-                const response = await fetch('http://localhost:5000/tab-switch', {
+                const response = await fetch('https://quikbuzz4all.onrender.com/tab-switch', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
