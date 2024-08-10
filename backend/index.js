@@ -1,10 +1,9 @@
-
+const path = require('path'); // Add this line to require the path module
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-/* const { OpenAIApi } = require('openai');
-require('dotenv').config(); */
+
 const cors = require('cors');
 app.use(cors());
 app.use(express.json());
