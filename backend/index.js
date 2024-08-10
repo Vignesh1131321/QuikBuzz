@@ -55,7 +55,7 @@ app.get('/teams/:pin', (req, res) => {
 });
 
 app.post('/buzz', (req, res) => {
-  const { pin, teamName } = req.body;
+  const { teamName, pin } = req.body;
   const room = rooms[pin];
   if (room) {
     const buzzTime = new Date().toLocaleTimeString();

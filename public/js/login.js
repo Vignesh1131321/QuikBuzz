@@ -16,8 +16,8 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
       const result = await response.json();
       if (result.success) {
         // Store both the PIN and team name
-        localStorage.setItem('roomPin', pin);
-        localStorage.setItem('teamName', teamName);
+        sessionStorage.setItem('roomPin', pin);
+        sessionStorage.setItem('teamName', teamName);
         window.location.href = 'buzzer.html'; // Redirect to buzzer page
       } else {
         document.getElementById('status').innerText = `Login failed: ${result.message}`;
