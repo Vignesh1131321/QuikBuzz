@@ -19,7 +19,8 @@ const timerTime = document.getElementById('timer-time');
   const reset = document.getElementById('reset');
 
   
-  let roomPin = localStorage.getItem('roomPin');
+  let roomPin = sessionStorage.getItem('roomPin');
+
   let timerInterval;
   let timerDuration;
   let timerEndTime;
@@ -333,7 +334,7 @@ link2.addEventListener('click', () => {
       const data = await response.json();
       if (data.success) {
         roomPin = data.pin;
-        localStorage.setItem('roomPin', roomPin);
+        sessionStorage.setItem('roomPin', roomPin);
         fetchTeams(); // Fetch teams right after creating the room
       } else {
         alert('Failed to create room');
