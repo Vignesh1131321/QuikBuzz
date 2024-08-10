@@ -344,6 +344,8 @@ link2.addEventListener('click', () => {
       options: {
         scales: {
           x: {
+            barPercentage: 0.5, // Adjust the width of each bar (smaller value for thinner bars)
+            categoryPercentage: 0.5, // Adjust the width of the bar groups
             ticks: {
               color: 'white', // Set X-axis labels to white
               font: {
