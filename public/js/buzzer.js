@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       audio.play();
   };
   const addPulsatingEffect = () => {
-    buzzButton.classList.add('pulsating');
+    buzzButton.classList.add('Pulsating');
 };
 
 const removePulsatingEffect = () => {
